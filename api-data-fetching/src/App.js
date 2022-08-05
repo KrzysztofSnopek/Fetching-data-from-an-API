@@ -1,10 +1,10 @@
 import React from "react";
+import { CharacterCard } from "./Components/CharacterCard";
 
 function App() {
   return (
-    <h1>
-      Hello
-    </h1>
+    <CharacterCard />
+    // <h1>Ala</h1>
   );
 }
 
