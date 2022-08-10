@@ -1,9 +1,9 @@
 import React from "react";
-import { CharacterCard } from "./Components/CharacterCard";
+import { PropsHolder } from './Components/PropsHolder'
 
 function App() {
   return (
-    <CharacterCard />
+    <PropsHolder />
     // <h1>Ala</h1>
   );
 }

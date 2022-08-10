@@ -1,20 +1,15 @@
-import React from 'react'
-import { CharacterCard } from './CharacterCard'
-
-
 type Props = {
-    url: string;
-    worlds: string[];
+    worldNames: string[];
 }
 
 
 export function WorldList(props: Props) {
-    const { url, worlds } = props;
+    const { worldNames } = props;
     
     return (
         <div>
             <select name="" id="">
-                {worlds.map((world, index) => {
+                {worldNames.map((world, index) => {
                     return(
                         <option value={world} key={index}>{world}</option>
                     )
