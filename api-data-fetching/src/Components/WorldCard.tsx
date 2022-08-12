@@ -1,23 +1,23 @@
+import { WorldData } from "./PropsHolder";
+
 type Props = {
-    worldProps: object[];
+    selectedId: string;
+    worldInfo: object[];
 }
 
-
 export function WorldCard(props: Props) {
-    const { worldProps } = props;
-
-    console.log(worldProps)
+    const { worldInfo, selectedId } = props;
     
     return (
         <div>
-            {worldProps.map((singleWorld: any, index) => {
+            {worldInfo.filter((world: Partial<WorldData>) => world.name?.includes(selectedId)).map((singleWorld: Partial<WorldData>, index) => {
                 return(
-                    <ul key={index}>
-                        <li>World: {singleWorld.wname}</li>
-                        <li>Server: {singleWorld.wlocation}</li>
-                        <li>World Status: {singleWorld.wstatus}</li>
-                        <li>Players online: {singleWorld.wplayers_online}</li>
-                        <li>World type: {singleWorld.wgame_world_type}</li>
+                    <ul key={index} id={singleWorld.name}>
+                        <li>World: {singleWorld.name}</li>
+                        <li>Server: {singleWorld.location}</li>
+                        <li>World Status: {singleWorld.status}</li>
+                        <li>Players online: {singleWorld.players_online}</li>
+                        <li>World type: {singleWorld.game_world_type}</li>
                     </ul>
                 )
             })}

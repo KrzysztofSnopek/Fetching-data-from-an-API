@@ -4,7 +4,6 @@ import { PropsHolder } from './Components/PropsHolder'
 function App() {
   return (
     <PropsHolder />
-    // <h1>Ala</h1>
   );
 }
 
