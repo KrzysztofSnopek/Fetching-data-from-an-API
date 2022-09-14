@@ -10,7 +10,7 @@ export function WorldCard(props: Props) {
     
     return (
         <div>
-            {worldInfo.filter((world: Partial<WorldData>) => world.name?.includes(selectedId)).map((singleWorld: Partial<WorldData>, index) => {
+            {worldInfo.filter((world: Partial<WorldData>) => world.name === selectedId).map((singleWorld: Partial<WorldData>, index) => {
                 return(
                     <ul key={index} id={singleWorld.name}>
                         <li>World: {singleWorld.name}</li>

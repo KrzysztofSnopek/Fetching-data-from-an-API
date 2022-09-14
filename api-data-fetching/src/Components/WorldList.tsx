@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { WorldCard } from './WorldCard'
+import { WorldCard } from './WorldCard';
+import { WorldStyled } from '../Styles/World.styled';
 
 type Props = {
     worldNames: string[];
@@ -16,7 +17,7 @@ export function WorldList(props: Props) {
     }
     
     return (
-        <div>
+        <WorldStyled>
             <select id='world' onChange={handleView}>
                 {worldNames.map((world, index) => {
                     return(
@@ -25,6 +26,6 @@ export function WorldList(props: Props) {
                 })}
             </select>
             <WorldCard worldInfo={worldInfo} selectedId={selectedId} />
-        </div>
+        </WorldStyled>
     )
 }

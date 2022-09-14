@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { WorldList } from "./WorldList";
+import { WorldListStyled } from "../Styles/WorldList.styled";
 
 const url = 'https://api.tibiadata.com/v3/';
 const getAllWorlds = () => {
@@ -48,8 +49,10 @@ export function PropsHolder(): JSX.Element {
     
 
     return(
-        <div>
-            <WorldList worldNames={worldNames} worldInfo={worldInfo}/>            
-        </div>
+        <WorldListStyled>
+            <div className="center-box">
+                <WorldList worldNames={worldNames} worldInfo={worldInfo} /> 
+            </div>           
+        </WorldListStyled>
     );
 }
